@@ -1,0 +1,26 @@
+.img {
+    height: 6vh;
+    padding-right: 2vh;
+}
+
+.navbar-class {
+    background-color: black;
+}
+
+a {
+    padding-left: 0px !important;
+    color: white !important;
+}
+
+.dropdown-class {
+    margin-top: 6px !important;
+}
+
+.button-class {
+    height: fit-content;
+    border-radius: 20px;
+}
+
+svg {
+    color: white !important;
+}
