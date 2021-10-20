@@ -5,6 +5,7 @@
 
 .navbar-class {
     background-color: white;
+    border-bottom: 3px solid green;
 }
 
 a {

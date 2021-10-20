@@ -27,7 +27,7 @@ return(
                 </Col>
                 </Row>
                 <Row className='pl-1'>
-                    <Button variant='light' className='mt-3 mb-5' style={{border:'1px solid gray'}}>Servicable Areas</Button>
+                    <Button variant='light' className='mt-3 mb-5' style={{border:'1px solid gray'}}>Serviceable Areas</Button>
                 </Row>
             </Container>
 )
