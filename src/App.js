@@ -13,7 +13,7 @@ function App() {
         <Jumbotron/>
         <Cards/>
         <Comingsoon/>
-        {/* <Footer/> */}
+        <Footer/>
     </div>
   );
 }

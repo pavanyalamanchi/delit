@@ -15,19 +15,19 @@ return(
                     <AiFillYoutube className='mx-2 footer-icons' size='lg'/>
                 </Row>
                 <Row>
-                <Col className='col-3 flex-column align-items-start pl-2 mt-3 text-white'>
+                <Col className='col-3 flex-column align-items-start pl-2 mt-3 text-dark'>
                     <h6>About</h6>
                     <h6>Contact Us</h6>
                     <h6>Terms & Conditions</h6>
                 </Col>
-                <Col className='col-3 flex-column align-items-start pl-2 mt-3 text-white'>
+                <Col className='col-3 flex-column align-items-start pl-2 mt-3 text-dark second-list-col'>
                     <h6>Privacy Policy</h6>
                     <h6>Jobs</h6>
                     <h6>Delit Partner</h6>
                 </Col>
                 </Row>
-                <Row className='pl-2'>
-                    <Button variant='light' className='mt-3 mb-5'>Servicable Areas</Button>
+                <Row className='pl-1'>
+                    <Button variant='light' className='mt-3 mb-5' style={{border:'1px solid gray'}}>Servicable Areas</Button>
                 </Row>
             </Container>
 )

@@ -3,9 +3,7 @@ import {
   Navbar,
   Nav,
   NavDropdown,
-  Row,
   Button,
-  Col,
 } from "react-bootstrap";
 import "./NavBar.css";
 import { ImLocation2 } from "react-icons/im";
@@ -51,21 +49,20 @@ const NavBar = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-            <Row>
-            <Col>
-              <BiSearchAlt2 />
-            </Col>
-            <Col className="mr-3">
-              <BsCart4 />
-            </Col>
+            
+            <Nav.Link className='mr-4'>
+              <BiSearchAlt2 className='svg_icons'/>
+              </Nav.Link>
+            <Nav.Link className='mr-4'>
+              <BsCart4 className='svg_icons'/>
+              </Nav.Link>
             <Button
               variant="success"
-              className="button-class"
-              style={{ color: "#5af4b2" }}
+              className="button-class mr-2"
             >
               Sign In
             </Button>
-          </Row>
+          
             </Nav>
           </Navbar.Collapse>
         </Container>

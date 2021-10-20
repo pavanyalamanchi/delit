@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    background-color: black !important;
+    background-color: white !important;
     min-height: 100vh;
 }
 
@@ -37,4 +37,8 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+body {
+    padding-top: 65px;
 }

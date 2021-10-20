@@ -1,15 +1,15 @@
 .img {
-    height: 6vh;
+    height: 5vh;
     padding-right: 2vh;
 }
 
 .navbar-class {
-    background-color: black;
+    background-color: white;
 }
 
 a {
     padding-left: 0px !important;
-    color: white !important;
+    color: black !important;
 }
 
 .dropdown-class {
@@ -22,5 +22,17 @@ a {
 }
 
 svg {
-    color: white !important;
+    color: black !important;
+}
+
+.svg_icons {
+    transform: scale(1.8);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }

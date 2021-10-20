@@ -4,10 +4,9 @@
 }
 
 .footer-class {
-    margin-left: 14rem;
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     bottom: 0rem;
-    background-color: black;
+    background-color: white;
 }
 
 .list-class {
@@ -33,9 +32,14 @@
 
 li {
     list-style: none;
-    color: white;
+    color: black;
 }
 
 h6 {
     display: flex;
+    width: 10rem;
+}
+
+.second-list-col {
+    padding-left: 7rem !important;
 }
