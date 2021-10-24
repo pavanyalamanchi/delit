@@ -6,7 +6,8 @@
 .footer-class {
     /* margin-top: 6rem; */
     bottom: 0rem;
-    background-color: white;
+    background: transparent;
+    padding-left: 1.5rem;
 }
 
 .list-class {

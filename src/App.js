@@ -5,15 +5,22 @@ import Jumbotron from './components/HomePage/Jumbotron/Jumbotron'
 import Cards from './components/HomePage/Cards/Cards'
 import Comingsoon from './components/HomePage/SecondJumbotron/Comingsoon';
 import Footer from './components/HomePage/Footer/Footer'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Fruits from './components/CardComponents/Fruits&Vegetables/Fruits'
 
 function App() {
   return (
     <div className="App">
+        <Router>
         <NavBar/>
-        <Jumbotron/>
-        <Cards/>
-        <Comingsoon/>
+        <Route path="/" exact>
+          <Jumbotron/>
+          <Cards/>
+          {/* <Comingsoon/> */}
+        </Route>
+        <Route path='/fruits' exact render={() => <Fruits/>} />
         <Footer/>
+        </Router>
     </div>
   );
 }

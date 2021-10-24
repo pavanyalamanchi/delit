@@ -4,8 +4,9 @@
 }
 
 .navbar-class {
-    background-color: white;
-    border-bottom: 3px solid green;
+    background-color: none !important;
+    border-bottom: 3px solid yellow;
+    background-image: linear-gradient(to right, white, green);
 }
 
 a {
@@ -23,11 +24,15 @@ a {
 }
 
 svg {
-    color: black !important;
+    color: black;
 }
 
 .svg_icons {
     transform: scale(1.8);
+}
+
+.svg_location {
+    transform: scale(1.2);
 }
 
 .navbar {

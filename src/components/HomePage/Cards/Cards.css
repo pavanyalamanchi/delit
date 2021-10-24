@@ -12,3 +12,8 @@
         margin-left: 5rem;
     }
 } */
+
+.card {
+    padding: 5px 5px 5px 5px !important;
+    border: 2px solid yellow;
+}

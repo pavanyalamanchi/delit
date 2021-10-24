@@ -32,7 +32,7 @@ const NavBar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto mr-auto">
               <Nav.Link href="#features" className="mr-1 pr-0 nav-link-class">
-                <ImLocation2 color="green" />
+                <ImLocation2 style={{color:'green'}} className='svg_location '/>
               </Nav.Link>
               <NavDropdown title="Set Location" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
