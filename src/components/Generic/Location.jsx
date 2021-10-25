@@ -12,7 +12,7 @@ const eircode = useSelector((s) => s.eircode)
 
     Geocode.setLocationType("ROOFTOP");
 
-    Geocode.setApiKey("AIzaSyCJ_JRKA4QOfkfaEdM69ovi-irxdKIoA6M");
+    Geocode.setApiKey("xxxx");
 
     useEffect(() => {
         Geocode.fromAddress(eircode).then(
