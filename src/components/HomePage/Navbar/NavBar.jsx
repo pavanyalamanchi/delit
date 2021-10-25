@@ -9,13 +9,14 @@ import "./NavBar.css";
 import { ImLocation2 } from "react-icons/im";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { BsCart4, BsMenuButtonWideFill } from "react-icons/bs";
+import LocationModal from '../Modal/LocationModal'
 
 const NavBar = () => {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="navbar-class">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               src="https://res.cloudinary.com/dsu915vad/image/upload/v1634554707/DelIt/DelIt_1_ifxnrb.png"
               className="d-inline-block align-top img"
@@ -34,19 +35,7 @@ const NavBar = () => {
               <Nav.Link href="#features" className="mr-1 pr-0 nav-link-class">
                 <ImLocation2 style={{color:'green'}} className='svg_location '/>
               </Nav.Link>
-              <NavDropdown title="Set Location" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
+              <LocationModal/>
             </Nav>
             <Nav>
             

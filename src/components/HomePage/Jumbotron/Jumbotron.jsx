@@ -1,4 +1,4 @@
-import {Button, Container, Image} from 'react-bootstrap'
+import { Container, Image} from 'react-bootstrap'
 import './Jumbotron.css'
 
 const Jumbotron = () => {

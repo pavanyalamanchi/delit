@@ -6,7 +6,7 @@
 .navbar-class {
     background-color: none !important;
     border-bottom: 3px solid yellow;
-    background-image: linear-gradient(to right, white, green);
+    background-image: linear-gradient(to right, darkcyan, gray);
 }
 
 a {

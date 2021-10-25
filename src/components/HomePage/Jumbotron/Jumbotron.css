@@ -11,6 +11,7 @@
 .jumboContainer img {
     width: 100%;
     height: auto;
+    /* transform: scale(0.5); */
 }
 
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { ListGroup, Container, Row, Col, Image } from "react-bootstrap";
-import './Fruits.css'
+import { Card, Container, Row, Col, Button, Image } from "react-bootstrap";
+import "./Fruits.css";
+import {MdAddShoppingCart} from 'react-icons/md'
 
 const Fruits = () => {
   const [fruitsData, setFruitsData] = useState([]);
@@ -26,28 +27,36 @@ const Fruits = () => {
     }
   };
 
+  const replace = (str) => {
+    let newStr = str.replace(/-/g, ' ')
+      return newStr
+  }
+
   return (
     <>
-      <ListGroup >
-        {fruitsData.map((fruit) => (
-          <ListGroup.Item>
-            <Container>
-              <Row className='justify-content-center'>
-                <Col xs={6} md={2}>
-                  <Image src={fruit.Image_Path} rounded className='img-class'/>
-                </Col>
-                <Col xs={6} md={2} className='pt-2'>
-                  <span>{fruit.Class_Name}</span>
-                  <span> {fruit.Fruit_Name}</span>
-                </Col>
-                <Col xs={6} md={2} className='pt-2'>
-                  <h6>€{fruit.Price}/each</h6>
-                </Col>
-              </Row>
-            </Container>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
+     <Container style={{minWidth:'0'}}>
+        <Row className="row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-2 justify-content-center">
+          
+          {fruitsData.map((fruit) => {
+            return (
+                <Col className='px-0'>
+              <Card className='card-class'>
+              <Image src={fruit.Image_Path} roundedCircle className='img-class'/>
+                <Card.Body>
+                  <Card.Title className='text-ellipsis'>{replace(fruit.Class_Name)}</Card.Title>
+                  <Card.Text className='price'>
+                    {fruit.Price}€/each
+                  </Card.Text>
+                  <Button variant="light" className='btn-class'><MdAddShoppingCart className='svg-class' color='green'/> Add</Button>
+                </Card.Body>
+              </Card>
+              </Col>
+            );
+          })}
+          
+        </Row>
+      </Container>
+
     </>
   );
 };
