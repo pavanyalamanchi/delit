@@ -1,52 +1,77 @@
 import Geocode from "react-geocode";
-import {useState, useEffect} from 'react'
 import {useSelector, useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
+import {addToState} from '../../Redux/actions'
+import {useEffect, useState} from 'react'
 
 const Location = () => {
 
-const [latitude, setLatitude] = useState()
-const [longitude, setLongitude] = useState()
+ const eircode = useSelector((s) => s.eircode)
+ const dispatch = useDispatch()
+const [lat, setLat] = useState()
+const [long, setLong] = useState()
+const [address, setAddress] = useState()
 
-const eircode = useSelector((s) => s.eircode)
-
-    Geocode.setLocationType("ROOFTOP");
-
-    Geocode.setApiKey("AIzaSyCJ_JRKA4QOfkfaEdM69ovi-irxdKIoA6M");
 
     useEffect(() => {
-        Geocode.fromAddress(eircode).then(
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log("Latitude is :", position.coords.latitude);
+            console.log("Longitude is :", position.coords.longitude);
+            setLat(position.coords.latitude)
+            setLong(position.coords.longitude)
+          })
+        
+    },[])
+
+
+   
+        Geocode.setApiKey("AIzaSyCJ_JRKA4QOfkfaEdM69ovi-irxdKIoA6M");
+        Geocode.setLocationType("ROOFTOP");
+        Geocode.fromLatLng(lat,long).then(
             (response) => {
-              const { lat, lng } = response.results[0].geometry.location;
-              console.log(lat, lng);
-              setLongitude(lng)
-              setLatitude(lat)
+              const curr_address = response.results[0].formatted_address;
+              console.log('address',curr_address);
+              setAddress(curr_address)
+              dispatch(addToState(curr_address))
+            //   dispatch(addToState(lat,lng))
             },
             (error) => {
               console.error(error);
             }
           );
-    },[])
+    
+    
 
-    //   const getLatLong = () => {
-    //     navigator.geolocation.getCurrentPosition(function(position) {
-    //         setLatitude(position.coords.latitude)
-    //         setLongitude(position.coords.longitude)
-    //         console.log("Latitude is :", position.coords.latitude);
-    //         console.log("Longitude is :", position.coords.longitude);
-    //       })
-    //   }
+    // const fetchLocation = () => {
 
-    //   useEffect(()=>{
-    //       getLatLong()
-    //   },[])
+    //     Geocode.setApiKey("AIzaSyCJ_JRKA4QOfkfaEdM69ovi-irxdKIoA6M");
+
+    //     Geocode.setLocationType("ROOFTOP");
+    //     if(eircode != ''){
+    //         console.log('eircode',eircode)
+    //         Geocode.fromAddress(eircode).then(
+    //             (response) => {
+    //                 const { latitude, longitude } = response.results[0].geometry.location;
+    //                 console.log('with eir',latitude, longitude);
+    //                 fetchAddress(latitude,longitude)
+    //               },
+    //               (error) => {
+    //                 console.error(error);
+    //               }
+    //         )
+    //     }
+    //     else{
+    //     fetchAddress(lat,long)
+    //     }
+    // }
 
 
     return(
         <>
-        {console.log(latitude, longitude)}
+        { console.log('test',lat,long)}
+        {console.log('eir',eircode)}
         </>
     )
 }
 
-export default withRouter(Location)
+export default Location

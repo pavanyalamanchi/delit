@@ -3,10 +3,7 @@ import './Jumbotron.css'
 
 const Jumbotron = () => {
 return(
-    <Container className='jumboContainer'>
-        <Image  src="https://res.cloudinary.com/dsu915vad/image/upload/v1635062272/DelIt/GreenNewBanner_k1grdw.png" fluid />
-        {/* <Button className='jumboBtn'>Order Now</Button> */}
-    </Container>
+        <Image  src="https://res.cloudinary.com/dsu915vad/image/upload/v1635258458/DelIt/NarrowGreen_and_White_Simple_We_Delivery_Banner_72_x_26_in_k9qkh8.png" fluid />
 )
 }
 

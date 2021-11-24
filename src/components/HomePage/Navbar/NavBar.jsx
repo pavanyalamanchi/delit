@@ -33,7 +33,7 @@ const NavBar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto mr-auto">
               <Nav.Link href="#features" className="mr-1 pr-0 nav-link-class">
-                <ImLocation2 style={{color:'green'}} className='svg_location '/>
+                <ImLocation2 className='svg_location '/>
               </Nav.Link>
               <LocationModal/>
             </Nav>

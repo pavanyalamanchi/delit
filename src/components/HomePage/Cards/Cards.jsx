@@ -4,7 +4,7 @@ import './Cards.css'
 
 const Cards = (props) => {
   return (
-   <Container>
+   
         <CardGroup className='mt-4 mb-4'>
         <Card className='mr-2 cardHover'>
           <Card.Img variant="top" src="https://res.cloudinary.com/dsu915vad/image/upload/v1635069282/DelIt/Groceries_qptxhh.png" />
@@ -16,7 +16,6 @@ const Cards = (props) => {
           <Card.Img variant="top" src="https://res.cloudinary.com/dsu915vad/image/upload/v1635069514/DelIt/Fruits_Vegetables_1_irjulw.png" />
         </Card>
         </CardGroup>
-   </Container>
   );
 };
 

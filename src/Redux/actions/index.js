@@ -1,6 +1,6 @@
-export const addToState = (latitude, longitude) => ({
+export const addToState = (address) => ({
     type: 'SET_STATE',
-    payload: [latitude, longitude]
+    payload: address
 })
 
 export const setEircode = (eircode) => ({
