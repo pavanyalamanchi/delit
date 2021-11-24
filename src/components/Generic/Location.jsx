@@ -23,9 +23,10 @@ const [address, setAddress] = useState()
         
     },[])
 
+    
 
    
-        Geocode.setApiKey("AIzaSyCJ_JRKA4QOfkfaEdM69ovi-irxdKIoA6M");
+        Geocode.setApiKey(process.env.GEOCODE_API);
         Geocode.setLocationType("ROOFTOP");
         Geocode.fromLatLng(lat,long).then(
             (response) => {
