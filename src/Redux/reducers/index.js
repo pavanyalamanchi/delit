@@ -10,6 +10,10 @@ const rootReducer = (state = initialState, action) => {
             return {
                 eircode: action.payload
             }
+        case 'SET_REF':
+            return {
+                ref: {...action.payload }
+            }
         default:
             return state
     }

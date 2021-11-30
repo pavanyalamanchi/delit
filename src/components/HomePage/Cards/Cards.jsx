@@ -9,7 +9,7 @@ const Cards = (props) => {
         <Card className='mr-2 cardHover'>
           <Card.Img variant="top" src="https://res.cloudinary.com/dsu915vad/image/upload/v1635069282/DelIt/Groceries_qptxhh.png" />
         </Card>
-        <Card className='mx-2 cardHover'>
+        <Card onClick={() => props.history.push('/pickup')} className='mx-2 cardHover'>
           <Card.Img variant="top" src="https://res.cloudinary.com/dsu915vad/image/upload/v1635069513/DelIt/Pickup_Drop_1_is1okl.png" />
         </Card>
         <Card onClick={() => props.history.push('/fruits')} className='ml-2 cardHover'>

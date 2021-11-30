@@ -23,7 +23,7 @@ const address = useSelector((state) => state.address)
   return(
     <>
     {address ? <h5 variant="light" className='align-items-center pt-2' onClick={handleShow}>
-        {address.split(',')[2]}
+        {address.split(',')[0]}
       </h5> : <h5 variant="light" className='align-items-center pt-2' onClick={handleShow}>
         Set Location
       </h5>}

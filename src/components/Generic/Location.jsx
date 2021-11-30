@@ -13,6 +13,24 @@ const [long, setLong] = useState()
 const [address, setAddress] = useState()
 
 
+const fetchAddress = () => {
+    Geocode.setApiKey('AIzaSyCJ_JRKA4QOfkfaEdM69ovi-irxdKIoA6M');
+Geocode.setLocationType("APPROXIMATE");
+    Geocode.fromLatLng(lat,long).then(
+        (response) => {
+          const curr_address = response.results[0].formatted_address;
+          console.log('address',curr_address);
+          setAddress(curr_address)
+          dispatch(addToState(curr_address))
+        //   dispatch(addToState(lat,lng))
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+}
+
+
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(function(position) {
             console.log("Latitude is :", position.coords.latitude);
@@ -23,23 +41,14 @@ const [address, setAddress] = useState()
         
     },[])
 
+    useEffect(() => {
+        fetchAddress()
+    },[lat,long])
     
 
    
-        Geocode.setApiKey(process.env.GEOCODE_API);
-        Geocode.setLocationType("ROOFTOP");
-        Geocode.fromLatLng(lat,long).then(
-            (response) => {
-              const curr_address = response.results[0].formatted_address;
-              console.log('address',curr_address);
-              setAddress(curr_address)
-              dispatch(addToState(curr_address))
-            //   dispatch(addToState(lat,lng))
-            },
-            (error) => {
-              console.error(error);
-            }
-          );
+        
+        
     
     
 

@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Fruits from './components/CardComponents/Fruits&Vegetables/Fruits'
 import Search from './components/Generic/Search'
 import Location from './components/Generic/Location'
+import Pickup from './components/CardComponents/Pickup&Drop/Pickup';
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
           {/* <Comingsoon/> */}
         </Route>
         <Route path='/fruits' exact >
-          <Search/>
+          <Search content={'search..'}/>
           <Fruits/>
+        </Route>
+        <Route path='/pickup'>
+          <Pickup/>
         </Route>
         <Footer/>
         </Router>

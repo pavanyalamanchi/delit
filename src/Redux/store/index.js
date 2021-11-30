@@ -7,7 +7,8 @@ import storage from 'redux-persist/lib/storage'
 
 export const initialState = {
     address: '',
-    eircode: ''
+    eircode: '',
+    ref: {}
 }
 
 const persistConfig = {
