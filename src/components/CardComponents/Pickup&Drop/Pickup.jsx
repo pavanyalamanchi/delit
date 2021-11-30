@@ -11,8 +11,8 @@ import {useSelector} from 'react-redux'
 
 
 const options = {
-//   fields: ["address_components", "geometry", "icon", "name"],
-//   strictBounds: false,
+  fields: ["address_components", "geometry", "icon", "name"],
+  strictBounds: false,
   types: ["address",'geocode','establisments','(regions)'],
   componentRestrictions: { country: "IE" }
 };
@@ -20,7 +20,6 @@ const options = {
 const Pickup = () => {
 
     const address = useSelector((state) => state.address)
-    const reduxRef = useSelector((state) => state.ref)
 
   const { ref } = usePlacesWidget({
     apiKey: "AIzaSyCLKJPN2AwuEPInrV54tkLSqYb2WOOTM8A",
@@ -62,7 +61,7 @@ const Pickup = () => {
                         {/* <MapModal/> */}
                         <div>
                           <input
-                            ref={reduxRef}
+                            
                             id='id1'
                             style={{ width: "100%" }}
                             placeholder="search pickup"
@@ -112,7 +111,7 @@ const Pickup = () => {
                         <Form.Label>DROP LOCATION</Form.Label>
                         <div>
                           <input
-                            
+                            ref={ref}
                             id='id2'
                             style={{ width: "100%" }}
                             placeholder="search drop"
